@@ -102,7 +102,6 @@ public class ProductdataApplicationTests {
     @Test
 //    @Transactional // enable/disable to show level 1 caching
     public void testCaching() {
-//        Session session = entityManager.unwrap(Session.class);
         repository.findById(1);
         repository.findById(1);
         repository.findById(1);

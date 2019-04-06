@@ -23,7 +23,7 @@ public class SqlInjectionTest {
 
         try {
             // 1. Get a connection to database
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "junior", "programmer");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "junior", "programmer");
 
             System.out.println("Database connection successful!\n");
 
@@ -73,7 +73,7 @@ public class SqlInjectionTest {
 
         try {
             // 1. Get a connection to database
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "junior", "programmer");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "junior", "programmer");
 
             System.out.println("Database connection successful!\n");
 
@@ -122,7 +122,7 @@ public class SqlInjectionTest {
 
         try {
             // 1. Get a connection to database
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "junior", "programmer");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "junior", "programmer");
 
             System.out.println("Database connection successful!\n");
 
