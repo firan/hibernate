@@ -49,7 +49,7 @@ public class ProductdataApplicationTests {
     public void testRead() {
         Product product = repository.findById(1).get();
         assertNotNull(product);
-        assertEquals("Dryer", product.getName());
+        assertEquals("IphoneX", product.getName());
         System.out.println(product.getDesc());
     }
 
@@ -60,12 +60,12 @@ public class ProductdataApplicationTests {
         repository.save(product);
     }
 
-//    @Test
-//    public void testDelete() {
-//        if (repository.existsById(1)) {
-//            repository.deleteById(1);
-//        }
-//    }
+    @Test
+    public void testDelete() {
+        if (repository.existsById(1)) {
+            repository.deleteById(1);
+        }
+    }
 
     @Test
     public void testCount() {
@@ -102,6 +102,7 @@ public class ProductdataApplicationTests {
     @Test
 //    @Transactional // enable/disable to show level 1 caching
     public void testCaching() {
+        Session session = entityManager.unwrap(Session.class);
         repository.findById(1);
         repository.findById(1);
         repository.findById(1);
